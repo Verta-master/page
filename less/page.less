@@ -1,3 +1,114 @@
 .page {
+  position: relative;
+  width: 1440px;
+  margin: 100px auto;
+  padding-top: 130px;
+  padding-bottom: 340px;
+  background-color: #019392;
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.page__close {
+  position: absolute;
+  top: 70px;
+  right: 70px;
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/icon-cross.png);
+  background-repeat: no-repeat;
+  background-size: 28px 30px;
+  background-position: center;
+}
+
+.page__title {
+  margin-top: 0;
+  font-size: 45px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.page__list {
+  .reset();
+  list-style: none;
+  margin-top: 170px;
+  position: relative;
   
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -66px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/icon-angle.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  &::before {
+    left: 100px;
+    transform: rotate(-90deg);
+  }
+  
+  &::after {
+    right: 65px;
+    transform: rotate(180deg);
+  }
+}
+
+.page__item {
+  position: relative;
+  width: 974px;
+  min-height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #fff;
+  
+  &:first-child {
+    border-radius: 10px 10px 0 0;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      left: -140px;
+      top: -100px;
+      width: 20px;
+      height: 20px;
+      background-image: url(../img/icon-angle.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  
+  &:last-child {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.page__img {
+  width: 130px;
+  padding-right: 15px;
+}
+
+.page__info {
+  width: ~"calc(100% - 230px)";
+  
+  p {
+    color: #696f7b;
+  }
+  
+  .page__subtitle {
+    color: #019392;
+    font-weight: 700;
+  }
 }
